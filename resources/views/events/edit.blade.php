@@ -16,15 +16,15 @@
         </div>
         <div class="form-group">
             <label for="title">Evento:</label>
-            <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" value="{{ $event->title }}">
+            <input type="text" class="form-control" id="title" name="title" placeholder="Nome do evento" value="{{ $event->title }}" required>
         </div>
-        <div class="form-group">
+        <div class="form-group"> 
             <label for="date">Data do evento:</label>
-            <input type="date" class="form-control" id="date" name="date" value="{{ $event->date }}" >
+            <input type="date" class="form-control" id="date" name="date" value="{{ $event->date }}" required>
         </div>
         <div class="form-group">
             <label for="title">Cidade:</label>
-            <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}">
+            <input type="text" class="form-control" id="city" name="city" placeholder="Local do evento" value="{{ $event->city }}" required>
         </div>
         <div class="form-group">
             <label for="title">O evento é privado ?</label>
