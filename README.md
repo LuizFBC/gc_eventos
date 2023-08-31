@@ -1,66 +1,78 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Documento de Navegação e Descrição do Projeto
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## 1. Introdução
+**Descrição Geral:** O Sistema de Gerenciamento de Eventos foi desenvolvido para permitir a criação, edição e administração eficiente de uma variedade de eventos, oferecendo uma experiência intuitiva para organizadores e participantes.
 
-## About Laravel
+## 2. Visão Geral do Sistema
+**Funcionalidades Principais:**
+- Criação de eventos
+- Participação em eventos
+- Exclusão de eventos
+- Autenticação de usuários (login)
+- Cadastro de novos usuários 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**Usuários Alvo:** O sistema atende a dois principais grupos de usuários:
+- Organizadores de eventos que desejam criar e gerenciar eventos.
+- Participantes interessados em participar de eventos criados por outros usuários.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Tecnologias Utilizadas:**
+- Front-end desenvolvido utilizando Bootstrap para um design responsivo e amigável.
+- Back-end implementado com o framework Laravel, fazendo uso da template engine Blade.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 3. Fluxo de Navegação
+**Fluxo de Navegação para Criar um Evento:**
+1. Usuário Acessa a Plataforma:
+   - Através da página de login, o usuário entra na plataforma.
 
-## Learning Laravel
+2. Página de Login:
+   - Insere suas credenciais (nome de usuário e senha).
+   - O sistema verifica as credenciais e redireciona o usuário para a página inicial.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+3. Página Inicial:
+   - O usuário navega até a seção "Meus Eventos" ou "Criar Evento".
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+4. Criar Evento:
+   - Clica no botão "Criar Novo Evento".
+   - O sistema exibe um formulário de criação de evento.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+5. Formulário de Criação de Evento:
+   - Preenche campos obrigatórios como título, data e hora.
+   - Adiciona descrição opcional.
+   - Define local do evento.
+   - Escolhe configurações de privacidade.
+   - Clica em "Criar Evento".
 
-## Laravel Sponsors
+6. Evento Criado:
+   - Sistema valida os dados e cria o evento no banco de dados.
+   - Confirmação visual do sucesso da criação.
+   - Redirecionamento para a lista de eventos.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+**Fluxo de Navegação para Participar de um Evento:**
+1. Usuário Acessa a Plataforma:
+   - Através da página de login, o usuário entra na plataforma.
 
-### Premium Partners
+2. Página de Login:
+   - Insere suas credenciais (nome de usuário e senha).
+   - O sistema verifica as credenciais e redireciona o usuário para a página inicial (dashboard).
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+3. Página Inicial:
+   - Explora a lista de eventos disponíveis.
 
-## Contributing
+4. Lista de Eventos:
+   - Clica em um evento específico para ver os detalhes.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+5. Detalhes do Evento:
+   - Lê informações como título, data, hora, local e descrição.
+   - Clica em "Confirmar Presença".
 
-## Code of Conduct
+6. Participação Confirmada:
+   - Sistema registra a participação do usuário no evento.
+   - Atualização dos detalhes do evento para refletir a presença do usuário.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 4. Telas e Funcionalidades
+- Tela de Login: Requer nome de usuário e senha, opção de "manter conectado".
+- Tela de Cadastro: Solicita nome, e-mail e senha para o novo usuário.
+- Lista de Eventos: Permite filtrar eventos e acessar detalhes como criador, participantes, datas e localização.
+- Detalhes do Evento: Exibe informações detalhadas como data, local, descrição, participantes e organizador.
+- Criação de Evento: Permite a criação de novos eventos, com detalhes como data, local, organizador e campos opcionais.
+- Gerenciamento de Evento: Oferece opções para editar ou excluir eventos criados, bem como visualizar o número de participantes
